@@ -118,6 +118,9 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current.menu-link::after {
@@ -149,6 +152,9 @@ ul {
   color: var(--primary-text-color);
   display: flex;
   align-items: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-tel {
@@ -222,6 +228,9 @@ ul {
   height: 50px;
   border-radius: 4px;
   border-style: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -387,6 +396,9 @@ ul {
   border-radius: 50%;
   background-color: var(--white-title-color);
   color: var(--icons-media-color);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
@@ -428,6 +440,9 @@ ul {
   border: 1px solid var(--icons-media-color);
   color: var(--icons-media-color);
   border-radius: 4px;
+  transition-property: border, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -481,11 +496,14 @@ ul {
   line-height: 1.62;
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
-  background: #f5f4fa;
+  background-color: var(--background-item-color);
   cursor: pointer;
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn:hover,
@@ -495,20 +513,47 @@ ul {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card {
   display: block;
-}
-
-.portfolio-card:hover,
-.portfolio-card:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover .portfolio-description,
+.portfolio-card:focus .portfolio-description{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: translateY(0);
+}
+
+.portfolio-img {
+  display: block;
+}
+
+.portfolio-img-block {
+  position: relative;
+}
+
+.portfolio-description {
+  position: absolute;
+  background: rgba(33, 150, 243, 0.9);
+  height: 100%;
+  display: flex;
+  padding: 63px 24px;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+
+.portfolio-description-test {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--white-title-color);
 }
 
 .portfolio-img-title {
@@ -519,10 +564,6 @@ ul {
   letter-spacing: 0.06em;
   color: var(--primary-title-color);
   margin-bottom: 4px;
-}
-
-.portfolio-img {
-  display: block;
 }
 
 .portfolio-img-text {
@@ -567,6 +608,9 @@ ul {
   color: var(--footer-text-color);
   margin-top: 9px;
   margin-bottom: 9px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-web:hover,
@@ -582,6 +626,9 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-tel:hover,
@@ -618,12 +665,14 @@ ul {
   border-radius: 50%;
   background-color: var(--footer-icon-bg-color);
   color: var(--white-title-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-color);
-  color: var(--white-title-color);
 }
 
 .footer-social-icon {
