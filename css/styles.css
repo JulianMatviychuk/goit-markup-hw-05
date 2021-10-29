@@ -517,9 +517,13 @@ ul {
 
 .portfolio-card {
   display: block;
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover,
+.portfolio-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-card:hover .portfolio-description,
@@ -533,25 +537,24 @@ ul {
   display: block;
 }
 
-.portfolio-img-block {
+.portfolio-card-block {
   position: relative;
   overflow: hidden;
 }
 
 .portfolio-description {
   position: absolute;
-  background: rgba(33, 150, 243, 0.9);
-  height: 100%;
-  padding: 63px 24px;
   top: 0;
   left: 0;
-  transform: translateY(100%);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(33, 150, 243, 0.9);
+  height: 100%;
+  width: 100%;
+  padding: 63px 24px;
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-description-test {
+.portfolio-description-text {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
